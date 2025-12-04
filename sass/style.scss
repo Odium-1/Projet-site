@@ -1,0 +1,212 @@
+@use "couleurs";
+@use "fonts";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+text {
+    font-family: fonts.$fontTitle;
+}
+
+/* ---------------- Banner ---------------- */
+#bandeau {
+    background-image: url(../images/etal-legumes2.jpg);
+    font-family: fonts.$fontTitle;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    #logo {
+        max-width: 1200px;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 200px;
+        }
+    }
+
+    #navbar {
+
+        background-color: couleurs.$couleur1;
+        width: 100%;
+        height: 86px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        ul {
+            width: 600px;
+            margin: 0 200px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        a {
+            color: couleurs.$whiteFont;
+
+            &:hover {
+                color: couleurs.$couleur2;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+/* ---------------- Footer ---------------- */
+#footer {
+
+    background-color: couleurs.$couleur1;
+    color: couleurs.$whiteFont;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    a {
+        color: couleurs.$whiteFont;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    #footerNav{
+        display:flex;
+        justify-content: space-between;
+    }
+}
+
+
+/* ---------------- Accueil ---------------- */
+
+/* --- accueil - bienvenue --- */
+#contenu #bienvenue {
+    display: flex;
+    margin: 0 16rem;
+    margin-bottom: 100px;
+    background-color: #139120; //placeholder
+
+    #introduction {
+        width: 140%;
+
+    }
+
+    .slider-wrapper {
+        width: 60%;
+        align-items: center;
+        justify-content: center;
+        background-color: aqua; // placeholder
+
+        #slider {
+            height: 285px;
+        }
+
+        .nivo-controlNav {
+            display: none;
+        }
+    }
+}
+
+
+
+
+
+/* --- accueil - en avant --- */
+#enAvant {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 80px;
+
+    .post {
+        width: 28%;
+        border: 1px solid rgba(53, 51, 51, 0.274);
+        padding-bottom: 24px;
+
+        img {
+            width: 100%;
+        }
+
+
+        h3,
+        p {
+            padding: 16px 16px 0;
+
+            a {
+                color: rgb(190, 158, 116);
+
+                &:hover {
+                    color: rgb(231, 193, 142);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/* ---------------- Page Contact ---------------- */
+
+#contact {
+    width: 50%;
+    padding: 0 25%;
+}
+
+.deuxColonnes {
+    display: flex;
+    width: 100%;
+
+    p {
+        width: 100%;
+    }
+}
+
+
+
+
+
+#contact input[type=text],
+#contact input[type=email],
+#contact select {
+    width: 90%;
+}
+
+#contact textarea {
+    width: 95%;
+}
+
+#contact input[type=submit],
+#contact input[type=reset] {
+    padding: 8px;
+    margin: 16px 8px 16px 0;
+    background-color: couleurs.$couleur2;
+    border: none;
+    border-radius: 5px;
+    color: couleurs.$fondClair;
+    font-size: 1.2rem;
+
+    &:hover {
+        background-color: #139120;
+    }
+}

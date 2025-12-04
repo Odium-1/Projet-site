@@ -1,0 +1,184 @@
+@font-face {
+  font-family: "antipasto";
+  src: url("../fonts/Antipasto-Pro-Regular-trial.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "oldstyle";
+  src: url("../fonts/OLDSH___.TTF ") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+text {
+  font-family: "antipasto";
+}
+
+/* ---------------- Banner ---------------- */
+#bandeau {
+  background-image: url(../images/etal-legumes2.jpg);
+  font-family: "antipasto";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#bandeau #logo {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+}
+#bandeau #logo img {
+  width: 200px;
+}
+#bandeau #navbar {
+  background-color: #29703C;
+  width: 100%;
+  height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#bandeau #navbar ul {
+  width: 600px;
+  margin: 0 200px;
+  display: flex;
+  justify-content: space-between;
+}
+#bandeau #navbar a {
+  color: #ffffff;
+}
+#bandeau #navbar a:hover {
+  color: #c9c9c9;
+}
+
+/* ---------------- Footer ---------------- */
+#footer {
+  background-color: #29703C;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+#footer a {
+  color: #ffffff;
+}
+#footer a:hover {
+  text-decoration: underline;
+}
+#footer #footerNav {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ---------------- Accueil ---------------- */
+/* --- accueil - bienvenue --- */
+#contenu #bienvenue {
+  display: flex;
+  margin: 0 16rem;
+  margin-bottom: 100px;
+  background-color: #139120;
+}
+#contenu #bienvenue #introduction {
+  width: 140%;
+}
+#contenu #bienvenue .slider-wrapper {
+  width: 60%;
+  align-items: center;
+  justify-content: center;
+  background-color: aqua;
+}
+#contenu #bienvenue .slider-wrapper #slider {
+  height: 285px;
+}
+#contenu #bienvenue .slider-wrapper .nivo-controlNav {
+  display: none;
+}
+
+/* --- accueil - en avant --- */
+#enAvant {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 80px;
+}
+#enAvant .post {
+  width: 28%;
+  border: 1px solid rgba(53, 51, 51, 0.274);
+  padding-bottom: 24px;
+}
+#enAvant .post img {
+  width: 100%;
+}
+#enAvant .post h3,
+#enAvant .post p {
+  padding: 16px 16px 0;
+}
+#enAvant .post h3 a,
+#enAvant .post p a {
+  color: rgb(190, 158, 116);
+}
+#enAvant .post h3 a:hover,
+#enAvant .post p a:hover {
+  color: rgb(231, 193, 142);
+}
+
+/* ---------------- Page Contact ---------------- */
+#contact {
+  width: 50%;
+  padding: 0 25%;
+}
+
+.deuxColonnes {
+  display: flex;
+  width: 100%;
+}
+.deuxColonnes p {
+  width: 100%;
+}
+
+#contact input[type=text],
+#contact input[type=email],
+#contact select {
+  width: 90%;
+}
+
+#contact textarea {
+  width: 95%;
+}
+
+#contact input[type=submit],
+#contact input[type=reset] {
+  padding: 8px;
+  margin: 16px 8px 16px 0;
+  background-color: #c9c9c9;
+  border: none;
+  border-radius: 5px;
+  color: #F3F9EC;
+  font-size: 1.2rem;
+}
+#contact input[type=submit]:hover,
+#contact input[type=reset]:hover {
+  background-color: #139120;
+}
+
+/*# sourceMappingURL=style.css.map */

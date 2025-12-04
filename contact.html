@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Vente directe à la ferme de produits bios - La Ferme de Gourhert</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header id="bandeau" class="container">
+        <div id="logo"><a href="index.html"><img src="images/LOGO-GOURHERT.png" alt="logo gourhert"></a>
+            <h3>Bienvenue à la Ferme de <span>Gourhert</span> !</h3>
+            <p>Légumes, œufs, viande ovine… choisissez les produits issus d’une agriculture biologique, paysanne et
+                locale respectueuse de l’homme et de l’environnement.</p>
+        </div>
+        <div id="navbar">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#">A propos</a></li>
+                <li><a href="#">Produits</a></li>
+                <li><a href="recettes.html">Recettes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <main id="contenu" class="container">
+        <h1 class="titrePage">Nous Contacter</h1>
+        <div id="contact">
+            <p>Civilité<br>
+                <input type="radio" name="civilite" id="M"><label for="M">M.</label>
+                <input type="radio" name="civilite" id="Mme"><label for="Mme">Mme.</label>
+                <input type="radio" name="civilite" id="Autre"><label for="Autre">Autre</label>
+            </p>
+
+
+
+            <div class="deuxColonnes">
+                <p><label for="Nom"></label>Nom<br><input type="text" name="Nom" id="Nom"></p>
+                <p><label for="Prenom"></label>Prenom<br><input type="text" name="Prenom" id="Prenom"></p>
+            </div>
+
+            <div class="deuxColonnes">
+                <p><label for="Email"></label>Email<br><input type="text" name="Email" id="Email"></p>
+            </div>
+
+
+
+            <p>
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="5"></textarea>
+            </p>
+
+
+            <p class="submit">
+                <input type="submit" value="Envoyer">
+                <input type="reset" value="Reset">
+            </p>
+
+        </div>
+
+    </main>
+
+    <footer id="footer" class="container">
+        <div class="colonne">
+            <address>
+                <h3>La Ferme de Gourhert</h3>
+                <div class="reseaux">
+                    <a href="#"><i class="fa-brands fa-square-facebook"></i> </a>
+                    <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                </div>
+            </address>
+        </div>
+        <div class="colonne">
+            <div id="footerNav">
+                <p><a href="contact.html">Contact</a></p>
+                <p><a href="#">Politique de confidentialité</a></p>
+                <p><a href="#">Mentions légales</a></p>
+            </div>
+            <p>2025 Ferme de Gourhert - Tous droits réservés</p>
+            <p>4, Gourhert - 56800 Ploërmel - Réalisation Little Beez</p>
+        </div>
+
+    </footer>
+</body>

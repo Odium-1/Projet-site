@@ -12,13 +12,15 @@
 </head>
 
 <body>
-    <header id="bandeau" class="container">
-        <div id="logo"><a href="index.html"><img src="images/LOGO-GOURHERT.png" alt="logo gourhert"></a>
-            <h3>Bienvenue à la Ferme de <span>Gourhert</span> !</h3>
+    <header class="bandeau">
+        <div class="bandeau__logo">
+            <a href="index.html"><img src="images/LOGO-GOURHERT.png" alt="logo gourhert"></a>
+            <h2>Ferme de Gourhert</h2>
             <p>Légumes, œufs, viande ovine… choisissez les produits issus d’une agriculture biologique, paysanne et
                 locale respectueuse de l’homme et de l’environnement.</p>
+                <div class="bandeau__logo__burger"><i class="fa-solid fa-bars"></i></div>
         </div>
-        <div id="navbar">
+        <nav class="bandeau__menu">
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="#">A propos</a></li>
@@ -26,31 +28,27 @@
                 <li><a href="recettes.html">Recettes</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
 
     <main id="contenu" class="container">
 
     </main>
 
-    <footer id="footer" class="container">
+    <footer class="footer">
         <div class="colonne">
-            <address>
-                <h3>La Ferme de Gourhert</h3>
-                <div class="reseaux">
-                    <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
-                </div>
+            <h3>La Ferme de Gourhert</h3>
+            <address class="reseaux">
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
             </address>
-        </div>
-        <div class="colonne">
             <div id="footerNav">
                 <p><a href="contact.html">Contact</a></p>
                 <p><a href="#">Politique de confidentialité</a></p>
                 <p><a href="#">Mentions légales</a></p>
             </div>
             <p>2025 Ferme de Gourhert - Tous droits réservés</p>
-            <p>4, Gourhert - 56800 Ploërmel - Réalisation Little Beez</p>
+            <p>4, Gourhert - 56800 Ploërmel - Réalisation Kercode</p>
         </div>
 
     </footer>

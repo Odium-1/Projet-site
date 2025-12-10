@@ -14,13 +14,15 @@
 </head>
 
 <body>
-    <header id="bandeau" class="container">
-        <div id="logo"><a href="index.html"><img src="images/LOGO-GOURHERT.png" alt="logo gourhert"></a>
-            <h3>Bienvenue à la Ferme de <span>Gourhert</span> !</h3>
+    <header class="bandeau">
+        <div class="bandeau__logo">
+            <a href="index.html"><img src="images/LOGO-GOURHERT.png" alt="logo gourhert"></a>
+            <h2>Ferme de Gourhert</h2>
             <p>Légumes, œufs, viande ovine… choisissez les produits issus d’une agriculture biologique, paysanne et
                 locale respectueuse de l’homme et de l’environnement.</p>
+            <div class="bandeau__logo__burger"><i class="fa-solid fa-bars"></i></div>
         </div>
-        <div id="navbar">
+        <nav class="bandeau__menu">
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="#">A propos</a></li>
@@ -28,46 +30,43 @@
                 <li><a href="recettes.html">Recettes</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
 
     <main id="contenu" class="container">
         <div id="bienvenue">
-            <div id="introduction">
-                <div id="titre titreVisuel">
-                    <h2><strong>Vos courses à la carte :</strong></h2>
+            <div id="bienvenue__introduction">
+                <div class="titre titreVisuel">
+                    <h2><strong>Une ferme de caractère</strong></h2>
                 </div>
-                <p>En venant ici faire vos courses, vous trouverez bien sûr les produits de notre ferme : légumes,
-                    oeufs et viande d’agneau et de veaux (selon la saison).</p>
-                <p>Mais, nous travaillons aussi en direct avec environ <strong>40 fermes et artisans locaux
-                    </strong>(ou plus loin mais toujours en direct) pour vous proposer un large choix : produits
-                    laitiers, pains, galettes, viandes, boissons, miel, tisanes, baumes, savons…</p>
-                <p>Notre magasin de vente au détail à la ferme est ouvert :</p>
-                <ul>
-                    <li><strong>le mardi : de 16h00 à 19h00</strong></li>
-                    <li><strong>le vendredi : de 15h00 à 19h00</strong></li>
-                    <li><strong>le samedi : de 10h00 à 12h00</strong></li>
-                </ul>
-                <p><strong>Vous pouvez également composer votre panier en ligne.</strong></p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quibusdam id sed, dolorum nihil quis
+                    incidunt ipsum assumenda quae tempore dolorem magnam itaque atque neque, facilis veniam vel magni
+                    commodis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam doloremque vero reiciendis quam
+                    incidunt cumque error pariatur exercitationem beatae, iste quia voluptatibus! Minima alias magnam
+                    corporis non deleniti. Ipsa, ab.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit autem sint quod enim aspernatur, rem
+                    quia officiis doloremque, laudantium deleniti numquam voluptates reprehenderit perspiciatis nisi,
+                    minima cumque facilis! Nulla, ut.</p>
             </div>
             <!-- Slider Nivoslider -->
             <div class="slider-wrapper theme-default">
                 <div id="slider" class="nivoSlider">
-                    <img src="images/pommes.jpg" alt="pommes" title="#htmlcaption1" />
-                    <img src="images/oeufs-bio.jpg" alt="oeufs" title="#htmlcaption2" />
-                    <img src="images/paindemie_bd.jpg" alt="pain de mie" title="#htmlcaption3" />
+                    <img src="images/moutonsRE.png" alt="moutons" title="#htmlcaption1" />
+                    <img src="images/oeufs-bioRE.jpg" alt="oeufs" title="#htmlcaption2" />
+                    <img src="images/chevresRE.jpg" alt="chèvres" title="#htmlcaption3" />
                 </div>
                 <div id="htmlcaption1" class="nivo-html-caption">
-                    <h4>Garden</h4>
-                    <p><span class="vert">Pro</span> design d'extérieur</p>
+                    <h4>Elevage en plein air</h4>
+                    <p>Lorem, ipsum dolor.</p>
                 </div>
                 <div id="htmlcaption2" class="nivo-html-caption">
-                    <h4>Jardin</h4>
-                    <p><span class="vert">Dit</span> à la française</p>
+                    <h4>Produits frais</h4>
+                    <p><span class="vert">Lorem ipsum dolor sit.</p>
                 </div>
                 <div id="htmlcaption3" class="nivo-html-caption">
-                    <h4>Fontaine</h4>
-                    <p><span class="vert">Déco</span> d'extérieur</p>
+                    <h4>Nos valeurs</h4>
+                    <p>Lorem ipsum dolor sit.</p>
                 </div>
             </div>
             <!--  -->
@@ -78,32 +77,37 @@
         </div>
 
         <section id="enAvant" class="container">
-            <article class="post">
+            <article id="enAvant__article">
                 <img src="images/lemon cake.jpg" alt="bûche au citron">
-                <h3><a href="#">Bûche au citron meringuée</a></h3>
+                <h3 class="titre"><a href="#">Bûche au citron meringuée</a></h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, iure tempore magnam labore
-                    voluptatem quod incidunt! Consequuntur adipisci quasi incidunt architecto quisquam. Laboriosam
-                    excepturi quasi, iure quisquam sed beatae veritatis.</p>
+                    voluptatem quod incidunt! Consequuntur adipisci quasi incidunt architecto quisquam.</p>
             </article>
-            <article class="post">
+            <article id="enAvant__article">
                 <img src="images/crumble.jpg" alt="crumble rhubarbe-fraise">
-                <h3><a href="#">Crumble rhubarbe-fraise</a></h3>
+                <h3 class="titre"><a href="#">Crumble rhubarbe-fraise</a></h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, iure tempore magnam labore
-                    voluptatem quod incidunt! Consequuntur adipisci quasi incidunt architecto quisquam. Laboriosam
-                    excepturi quasi, iure quisquam sed beatae veritatis.</p>
+                    voluptatem quod incidunt! Consequuntur adipisci quasi incidunt architecto quisquam.</p>
             </article>
-            <article class="post">
+            <article id="enAvant__article">
                 <img src="images/cremesoeufs.jpg" alt="crème aux oeufs gourhert">
-                <h3><a href="#">Crème aux oeufs de Gourhert</a></h3>
+                <h3 class="titre"><a href="#">Crème aux oeufs de Gourhert</a></h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, iure tempore magnam labore
-                    voluptatem quod incidunt! Consequuntur adipisci quasi incidunt architecto quisquam. Laboriosam
-                    excepturi quasi, iure quisquam sed beatae veritatis.</p>
+                    voluptatem quod incidunt! Consequuntur adipisci quasi incidunt architecto quisquam.</p>
             </article>
         </section>
 
+        <div id="partners">
+            <h3 class="titre">Retrouvez nos produits chez nos partenaires :</h3>
+            <section id="partners__partner-list">
+                <a href="#"><img src="images/partenaire1.png" alt="logo amap ploërmel"></a>
+                <a href="#"><img src="images/partenaire2.jpg" alt="logo crème rit"></a>
+                <a href="#"><img src="images/partenaire3.webp" alt="logo maison tiegezh"></a>
+        </div>
+        </div>
     </main>
 
-    <footer id="footer" class="container">
+    <footer class="footer">
         <div class="colonne">
             <h3>La Ferme de Gourhert</h3>
             <address class="reseaux">
@@ -116,7 +120,7 @@
                 <p><a href="#">Mentions légales</a></p>
             </div>
             <p>2025 Ferme de Gourhert - Tous droits réservés</p>
-            <p>4, Gourhert - 56800 Ploërmel - Réalisation Little Beez</p>
+            <p>4, Gourhert - 56800 Ploërmel - Réalisation Kercode</p>
         </div>
 
     </footer>

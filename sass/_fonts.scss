@@ -1,17 +1,16 @@
-@font-face {
-    font-family: 'antipasto';
-    src: url('../fonts/Antipasto-Pro-Regular-trial.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
-}
+    @font-face {
+        font-family: 'Inter Regular';
+        font-style: normal;
+        font-weight: normal;
+        src: local('Inter Regular'), url('../fonts/Inter-Regular.woff') format('woff');
+    }
 
-@font-face {
-    font-family: 'oldstyle';
-    src: url('../fonts/OLDSH___.TTF ') format('ttf');
-    font-weight: normal;
-    font-style: normal;
+    @font-face {
+        font-family: 'Georgia Regular';
+        font-style: normal;
+        font-weight: normal;
+        src: local('Georgia Regular'), url('../fonts/georgia.woff') format('woff');
+    }
 
-}
-
-$fontTitle: 'antipasto';
-$fontTexte: 'oldstyle';
+    $fontTexte: 'Inter Regular';
+    $fontTitle: 'Georgia Regular';

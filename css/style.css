@@ -1,14 +1,14 @@
 @font-face {
-  font-family: "antipasto";
-  src: url("../fonts/Antipasto-Pro-Regular-trial.ttf") format("ttf");
-  font-weight: normal;
+  font-family: "Inter Regular";
   font-style: normal;
+  font-weight: normal;
+  src: local("Inter Regular"), url("../fonts/Inter-Regular.woff") format("woff");
 }
 @font-face {
-  font-family: "oldstyle";
-  src: url("../fonts/OLDSH___.TTF ") format("ttf");
-  font-weight: normal;
+  font-family: "Georgia Regular";
   font-style: normal;
+  font-weight: normal;
+  src: local("Georgia Regular"), url("../fonts/georgia.woff") format("woff");
 }
 * {
   margin: 0;
@@ -23,95 +23,117 @@ ul {
   list-style-type: none;
 }
 
-.container {
+#contenu {
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
 }
 
-text {
-  font-family: "antipasto";
+body {
+  font-family: "Inter Regular";
+  font-size: 18px;
 }
 
-/* ---------------- Banner ---------------- */
-#bandeau {
+.titre {
+  font-family: "Georgia Regular";
+}
+
+/* ================ Banner ================ */
+.bandeau {
   background-image: url(../images/etal-legumes2.jpg);
-  font-family: "antipasto";
+  font-family: "Georgia Regular";
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 40px;
 }
-#bandeau #logo {
+.bandeau__logo {
   max-width: 1200px;
   display: flex;
   align-items: center;
+  margin: 20px 0;
 }
-#bandeau #logo img {
-  width: 200px;
-}
-#bandeau #navbar {
-  background-color: #29703C;
+.bandeau__logo img {
   width: 100%;
-  height: 86px;
+  max-width: 200px;
+}
+.bandeau__logo h2 {
+  width: 20%;
+}
+.bandeau__logo p {
+  font-family: "Inter Regular";
+}
+.bandeau__logo__burger {
+  font-size: 3rem;
+  display: none;
+}
+.bandeau__menu {
+  background-color: #489934;
+  font-family: "Inter Regular";
+  font-size: 1.1rem;
+  width: 100%;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#bandeau #navbar ul {
+.bandeau__menu ul {
   width: 600px;
   margin: 0 200px;
   display: flex;
   justify-content: space-between;
 }
-#bandeau #navbar a {
+.bandeau__menu ul a {
   color: #ffffff;
+  box-sizing: border-box;
 }
-#bandeau #navbar a:hover {
-  color: #c9c9c9;
+.bandeau__menu ul a:hover {
+  padding-bottom: 14px;
+  border-bottom: 5px solid white;
 }
 
-/* ---------------- Footer ---------------- */
-#footer {
-  background-color: #29703C;
+/* ================ Footer ================ */
+.footer {
+  background-color: #489934;
   color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-#footer a {
+.footer a {
   color: #ffffff;
 }
-#footer a:hover {
+.footer a:hover {
   text-decoration: underline;
 }
-#footer #footerNav {
+.footer__footerNav {
   display: flex;
   justify-content: space-between;
 }
 
-/* ---------------- Accueil ---------------- */
+/* ================ Accueil ================ */
 /* --- accueil - bienvenue --- */
-#contenu #bienvenue {
+#bienvenue {
   display: flex;
-  margin: 0 16rem;
   margin-bottom: 100px;
-  background-color: #139120;
 }
-#contenu #bienvenue #introduction {
-  width: 140%;
+#bienvenue__introduction {
+  padding: 20px;
+  box-shadow: 3px 10px 16px 0 rgba(0, 0, 0, 0.2);
+  margin: 0 20px;
 }
-#contenu #bienvenue .slider-wrapper {
-  width: 60%;
+#bienvenue.slider-wrapper {
   align-items: center;
   justify-content: center;
-  background-color: aqua;
 }
-#contenu #bienvenue .slider-wrapper #slider {
+#bienvenue.slider-wrapper img {
+  resize: both;
+}
+#bienvenue.slider-wrapper slider {
+  width: 447px;
   height: 285px;
-}
-#contenu #bienvenue .slider-wrapper .nivo-controlNav {
-  display: none;
 }
 
 /* --- accueil - en avant --- */
@@ -119,30 +141,53 @@ text {
   max-width: 1200px;
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 80px;
+  margin-bottom: 70px;
 }
-#enAvant .post {
+#enAvant__article {
   width: 28%;
   border: 1px solid rgba(53, 51, 51, 0.274);
   padding-bottom: 24px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
 }
-#enAvant .post img {
+#enAvant__article img {
   width: 100%;
 }
-#enAvant .post h3,
-#enAvant .post p {
+#enAvant__article h3,
+#enAvant__article p {
   padding: 16px 16px 0;
 }
-#enAvant .post h3 a,
-#enAvant .post p a {
+#enAvant__article h3 a,
+#enAvant__article p a {
   color: rgb(190, 158, 116);
 }
-#enAvant .post h3 a:hover,
-#enAvant .post p a:hover {
+#enAvant__article h3 a:hover,
+#enAvant__article p a:hover {
   color: rgb(231, 193, 142);
 }
+#enAvant__article:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
 
-/* ---------------- Page Contact ---------------- */
+/* --- accueil - partenaires --- */
+#partners {
+  margin-bottom: 40px;
+}
+#partners h3 {
+  margin-bottom: 15px;
+}
+#partners__partner-list {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#partners__partner-list a img {
+  max-width: 250px;
+  max-height: 180px;
+}
+
+/* ================ Page Contact ================ */
 #contact {
   width: 50%;
   padding: 0 25%;
@@ -179,6 +224,47 @@ text {
 #contact input[type=submit]:hover,
 #contact input[type=reset]:hover {
   background-color: #139120;
+}
+
+/* ================ Responsive Design ================ */
+/* --- tablette --- */
+@media screen and (max-width: 880px) {
+  .bandeau {
+    color: #ffffff;
+    background-image: url(/images/etal-legumes-vert.png);
+  }
+  .bandeau__logo__burger {
+    display: block;
+    padding-right: 3%;
+  }
+  .bandeau__menu {
+    display: none;
+  }
+}
+/* --- portable --- */
+@media screen and (max-width: 690px) {
+  .slider-wrapper {
+    display: none;
+  }
+  .bandeau__logo p {
+    display: none;
+  }
+  #enAvant {
+    flex-direction: column;
+    align-items: center;
+  }
+  #enAvant.article {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+  #partners {
+    text-align: center;
+  }
+  #partners__partner-list {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

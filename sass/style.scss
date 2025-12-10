@@ -30,80 +30,108 @@ body {
 }
 
 /* ================ Banner ================ */
-.bandeau {
+header {
     background-image: url(../images/etal-legumes2.jpg);
     font-family: fonts.$fontTitle;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
 
-    &__logo {
+    .bandeau {
         max-width: 1200px;
         display: flex;
         align-items: center;
         margin: 20px 0;
+        display: flex;
+        justify-content: space-between;
 
-        img {
-            width: 100%;
-            max-width: 200px;
-        }
+        &__logo {
+            display: flex;
+            align-items: center;
 
-        h2 {
-            width: 20%;
+            img {
+                width: 100%;
+                max-width: 200px;
+            }
+
+            h2 {
+                width: 35%;
+            }
+
         }
 
         p {
             font-family: fonts.$fontTexte;
+            width: 50%;
+            padding-right: 20px;
         }
 
         &__burger {
             font-size: 3rem;
             display: none;
+            z-index: 9;
         }
     }
 
-    &__menu {
-
+    .nav-wrapper {
         background-color: couleurs.$couleur1;
         font-family: fonts.$fontTexte;
         font-size: 1.1rem;
         width: 100%;
         height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        z-index: 8;
 
-        ul {
-            width: 600px;
-            margin: 0 200px;
+        &__navBar {
+            height: 100%;
             display: flex;
-            justify-content: space-between;
+            align-items: center;
+            justify-content: center;
 
-            a {
-                color: couleurs.$whiteFont;
-                box-sizing: border-box;
-
-                &:hover {
-                    padding-bottom: 14px;
-                    border-bottom: 5px solid white;
+            ul {
+                width: 600px;
+                margin: 0 200px;
+                display: flex;
+                justify-content: space-between;
+                
+                a {
+                    color: couleurs.$whiteFont;
+                    li{
+                        padding: 16px 0;
+            //            border-bottom: 5px solid couleurs.$couleur1;
+                        &:hover {
+                            border-bottom: 5px solid white;
+                        }
+                    }
                 }
             }
         }
-
     }
 }
 
 /* ================ Footer ================ */
 .footer {
-
+    height: 300px;
     background-color: couleurs.$couleur1;
     color: couleurs.$whiteFont;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    justify-content: space-between;
+
+    h3 {
+        margin-top: 50px;
+    }
+
+    &__reseaux {
+        font-size: 1.4rem;
+        display: flex;
+
+        i {
+            padding: 0 10px;
+        }
+    }
 
     a {
         color: couleurs.$whiteFont;
@@ -115,7 +143,19 @@ body {
 
     &__footerNav {
         display: flex;
-        justify-content: space-between;
+        margin-bottom: 30px;
+
+        p {
+            padding: 0 20px;
+        }
+    }
+
+    &__copyright {
+        padding-top: 20px;
+        font-size: small;
+        border-top: 1px solid rgba(255, 255, 255, 0.301);
+        width: 100%;
+        margin-bottom: 40px;
     }
 }
 
@@ -128,23 +168,22 @@ body {
     margin-bottom: 100px;
 
     &__introduction {
+        width: 120%;
         padding: 20px;
         box-shadow: 3px 10px 16px 0 rgba(0, 0, 0, 0.2);
         margin: 0 20px;
     }
 
     .slider-wrapper {
+        width: 80%;
         align-items: center;
         justify-content: center;
 
-        img {
-            resize: both;
-        }
-
         #slider {
-            width:447px;
+            width: 447px;
             height: 285px;
         }
+
     }
 }
 
@@ -262,11 +301,15 @@ body {
 /* ================ Responsive Design ================ */
 /* --- tablette --- */
 @media screen and (max-width:880px) {
-    .bandeau {
+    .slider-wrapper {
+        display: none;
+    }
+
+    header {
         color: couleurs.$whiteFont;
         background-image: url(/images/etal-legumes-vert.png);
 
-        &__logo {
+        .bandeau {
 
             &__burger {
                 display: block;
@@ -274,22 +317,60 @@ body {
             }
         }
 
-        &__menu {
+        .nav-wrapper {
+            position: absolute;
+            right: 0px;
             display: none;
+            height: 100%;
+            width: 35%;
+            border-radius: 50px 0 0 50px;
+
+
+            ul {
+                display: block;
+                margin: 0;
+                flex-direction: column;
+                text-align: center;
+
+                li {
+                    padding: 35px 0;
+
+                    &:hover,
+                    &:active {
+                        background-color: #2b5f1e;
+                    }
+
+                    a {
+                        &:hover {
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
         }
     }
 }
+
 /* --- portable --- */
 @media screen and (max-width:690px) {
-    .slider-wrapper {
-        display: none;
+    header {
+        .nav-wrapper {
+            height: 50%;
+            width: 100%;
+            border-radius: 0 0 50px 50px;
+
+            ul {
+                li {
+                    padding: 20px 0;
+                }
+            }
+        }
     }
 
+
     .bandeau {
-        &__logo {
-            p {
-                display: none;
-            }
+        p {
+            display: none;
         }
     }
 
@@ -297,7 +378,7 @@ body {
         flex-direction: column;
         align-items: center;
 
-        &.article {
+        &__article {
             width: 80%;
             margin-bottom: 30px;
         }

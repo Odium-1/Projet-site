@@ -39,68 +39,93 @@ body {
 }
 
 /* ================ Banner ================ */
-.bandeau {
+header {
   background-image: url(../images/etal-legumes2.jpg);
   font-family: "Georgia Regular";
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
 }
-.bandeau__logo {
+header .bandeau {
   max-width: 1200px;
   display: flex;
   align-items: center;
   margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
 }
-.bandeau__logo img {
+header .bandeau__logo {
+  display: flex;
+  align-items: center;
+}
+header .bandeau__logo img {
   width: 100%;
   max-width: 200px;
 }
-.bandeau__logo h2 {
-  width: 20%;
+header .bandeau__logo h2 {
+  width: 35%;
 }
-.bandeau__logo p {
+header .bandeau p {
   font-family: "Inter Regular";
+  width: 50%;
+  padding-right: 20px;
 }
-.bandeau__logo__burger {
+header .bandeau__burger {
   font-size: 3rem;
   display: none;
+  z-index: 9;
 }
-.bandeau__menu {
+header .nav-wrapper {
   background-color: #489934;
   font-family: "Inter Regular";
   font-size: 1.1rem;
   width: 100%;
   height: 60px;
+  z-index: 8;
+}
+header .nav-wrapper__navBar {
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.bandeau__menu ul {
+header .nav-wrapper__navBar ul {
   width: 600px;
   margin: 0 200px;
   display: flex;
   justify-content: space-between;
 }
-.bandeau__menu ul a {
+header .nav-wrapper__navBar ul a {
   color: #ffffff;
-  box-sizing: border-box;
 }
-.bandeau__menu ul a:hover {
-  padding-bottom: 14px;
+header .nav-wrapper__navBar ul a li {
+  padding: 16px 0;
+}
+header .nav-wrapper__navBar ul a li:hover {
   border-bottom: 5px solid white;
 }
 
 /* ================ Footer ================ */
 .footer {
+  height: 300px;
   background-color: #489934;
   color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  justify-content: space-between;
+}
+.footer h3 {
+  margin-top: 50px;
+}
+.footer__reseaux {
+  font-size: 1.4rem;
+  display: flex;
+}
+.footer__reseaux i {
+  padding: 0 10px;
 }
 .footer a {
   color: #ffffff;
@@ -110,7 +135,17 @@ body {
 }
 .footer__footerNav {
   display: flex;
-  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.footer__footerNav p {
+  padding: 0 20px;
+}
+.footer__copyright {
+  padding-top: 20px;
+  font-size: small;
+  border-top: 1px solid rgba(255, 255, 255, 0.301);
+  width: 100%;
+  margin-bottom: 40px;
 }
 
 /* ================ Accueil ================ */
@@ -120,18 +155,17 @@ body {
   margin-bottom: 100px;
 }
 #bienvenue__introduction {
+  width: 120%;
   padding: 20px;
   box-shadow: 3px 10px 16px 0 rgba(0, 0, 0, 0.2);
   margin: 0 20px;
 }
-#bienvenue.slider-wrapper {
+#bienvenue .slider-wrapper {
+  width: 80%;
   align-items: center;
   justify-content: center;
 }
-#bienvenue.slider-wrapper img {
-  resize: both;
-}
-#bienvenue.slider-wrapper slider {
+#bienvenue .slider-wrapper #slider {
   width: 447px;
   height: 285px;
 }
@@ -229,31 +263,59 @@ body {
 /* ================ Responsive Design ================ */
 /* --- tablette --- */
 @media screen and (max-width: 880px) {
-  .bandeau {
+  .slider-wrapper {
+    display: none;
+  }
+  header {
     color: #ffffff;
     background-image: url(/images/etal-legumes-vert.png);
   }
-  .bandeau__logo__burger {
+  header .bandeau__burger {
     display: block;
     padding-right: 3%;
   }
-  .bandeau__menu {
+  header .nav-wrapper {
+    position: absolute;
+    right: 0px;
     display: none;
+    height: 100%;
+    width: 35%;
+    border-radius: 50px 0 0 50px;
+  }
+  header .nav-wrapper ul {
+    display: block;
+    margin: 0;
+    flex-direction: column;
+    text-align: center;
+  }
+  header .nav-wrapper ul li {
+    padding: 35px 0;
+  }
+  header .nav-wrapper ul li:hover, header .nav-wrapper ul li:active {
+    background-color: #2b5f1e;
+  }
+  header .nav-wrapper ul li a:hover {
+    border-bottom: none;
   }
 }
 /* --- portable --- */
 @media screen and (max-width: 690px) {
-  .slider-wrapper {
-    display: none;
+  header .nav-wrapper {
+    height: 50%;
+    width: 100%;
+    border-radius: 0 0 50px 50px;
   }
-  .bandeau__logo p {
+  header .nav-wrapper ul li {
+    padding: 20px 0;
+  }
+  .bandeau p {
     display: none;
   }
   #enAvant {
     flex-direction: column;
     align-items: center;
   }
-  #enAvant.article {
+  #enAvant__article {
     width: 80%;
     margin-bottom: 30px;
   }

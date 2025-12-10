@@ -14,31 +14,43 @@
 </head>
 
 <body>
-    <header class="bandeau">
-        <div class="bandeau__logo">
-            <a href="index.html"><img src="images/LOGO-GOURHERT.png" alt="logo gourhert"></a>
-            <h2>Ferme de Gourhert</h2>
+    <header>
+        <div class="bandeau">
+            <div class="bandeau__logo">
+                <a href="index.html"><img src="images/LOGO-GOURHERT.png" alt="logo gourhert"></a>
+                <h2>Ferme de Gourhert</h2>
+            </div>
             <p>Légumes, œufs, viande ovine… choisissez les produits issus d’une agriculture biologique, paysanne et
                 locale respectueuse de l’homme et de l’environnement.</p>
-            <div class="bandeau__logo__burger"><i class="fa-solid fa-bars"></i></div>
+            <div class="bandeau__burger"><i class="fa-solid fa-bars"></i></div>
         </div>
-        <nav class="bandeau__menu">
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="#">A propos</a></li>
-                <li><a href="#">Produits</a></li>
-                <li><a href="recettes.html">Recettes</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="nav-wrapper">
+            <nav class="nav-wrapper__navBar">
+                <ul>
+                    <a href="index.html">
+                        <li>Accueil</li>
+                    </a>
+                    <a href="about.html">
+                        <li>À propos</li>
+                    </a>
+                    <a href="store.html">
+                        <li>Produits</li>
+                    </a>
+                    <a href="recettes.html">
+                        <li>Recettes</li>
+                    </a>
+                    <a href="contact.html">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main id="contenu" class="container">
         <div id="bienvenue">
             <div id="bienvenue__introduction">
-                <div class="titre titreVisuel">
-                    <h2><strong>Une ferme de caractère</strong></h2>
-                </div>
+                <h2 class="titre titreVisuel"><strong>Une ferme de caractère</strong></h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quibusdam id sed, dolorum nihil quis
                     incidunt ipsum assumenda quae tempore dolorem magnam itaque atque neque, facilis veniam vel magni
                     commodis.</p>
@@ -108,21 +120,20 @@
     </main>
 
     <footer class="footer">
-        <div class="colonne">
-            <h3>La Ferme de Gourhert</h3>
-            <address class="reseaux">
-                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
-            </address>
-            <div id="footerNav">
-                <p><a href="contact.html">Contact</a></p>
-                <p><a href="#">Politique de confidentialité</a></p>
-                <p><a href="#">Mentions légales</a></p>
-            </div>
-            <p>2025 Ferme de Gourhert - Tous droits réservés</p>
+        <h3>La Ferme de Gourhert</h3>
+        <address class="footer__reseaux">
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+        </address>
+        <div class="footer__footerNav">
+            <p><a href="contact.html">Contact</a></p>
+            <p><a href="confidentiality.html">Politique de confidentialité</a></p>
+            <p><a href="legal-mentions.html">Mentions légales</a></p>
+        </div>
+        <div class="footer__copyright">
+            <p>© 2025 Ferme de Gourhert - Tous droits réservés</p>
             <p>4, Gourhert - 56800 Ploërmel - Réalisation Kercode</p>
         </div>
-
     </footer>
 
     <!-- Script du slider Nivoslider -->
@@ -132,8 +143,8 @@
         $(window).load(function () {
             $('#slider').nivoSlider();
         });
-        $("#bandeau #menuPrincipal #burger i").click(function () {
-            $("#bandeau #menuPrincipal ul").slideToggle(500);
+        $("header .bandeau__burger i").click(function () {
+            $("header .nav-wrapper").slideToggle(500);
         })
     </script>
     <!--  -->

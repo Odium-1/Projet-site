@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Vente directe à la ferme de produits bios - La Ferme de Gourhert</title>
+    <link rel="stylesheet" href="theme/default.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -45,27 +47,36 @@
         </div>
     </header>
 
-    <main id="contenu" class="container">
+    <main>
 
     </main>
-
+    
     <footer class="footer">
-        <div class="colonne">
-            <h3>La Ferme de Gourhert</h3>
-            <address class="reseaux">
-                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
-            </address>
-            <div id="footerNav">
-                <p><a href="contact.html">Contact</a></p>
-                <p><a href="#">Politique de confidentialité</a></p>
-                <p><a href="#">Mentions légales</a></p>
-            </div>
-            <p>2025 Ferme de Gourhert - Tous droits réservés</p>
+        <h3>La Ferme de Gourhert</h3>
+        <address class="footer__reseaux">
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+        </address>
+        <div class="footer__footerNav">
+            <p><a href="contact.html">Contact</a></p>
+            <p><a href="#">Politique de confidentialité</a></p>
+            <p><a href="#">Mentions légales</a></p>
+        </div>
+        <div class="footer__copyright">
+            <p>© 2025 Ferme de Gourhert - Tous droits réservés</p>
             <p>4, Gourhert - 56800 Ploërmel - Réalisation Kercode</p>
         </div>
-
     </footer>
+
+    <!-- Script du slider Nivoslider -->
+    <script type="text/javascript" src="scripts/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+        $("header .bandeau__burger i").click(function () {
+            $("header .nav-wrapper").slideToggle(500);
+        })
+    </script>
+    <!--  -->
 </body>
 
 </html>

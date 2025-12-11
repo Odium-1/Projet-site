@@ -17,7 +17,7 @@ ul {
 .contenu {
     max-width: 1200px;
     width: 100%;
-    margin: 0 auto;
+    margin: 40px auto;
 }
 
 body {
@@ -28,6 +28,7 @@ body {
 .titre {
     font-family: fonts.$fontTitle;
 }
+
 
 /* ================ Header ================ */
 header {
@@ -75,7 +76,6 @@ header {
 
 /* --- header - navigation --- */
 .nav-wrapper {
-    margin-bottom: 40px;
     background-color: couleurs.$couleur1;
     font-family: fonts.$fontTexte;
     font-size: 1.1rem;
@@ -116,7 +116,6 @@ header {
 
 /* ================ Footer ================ */
 .footer {
-    margin-top: 40px;
     height: 300px;
     background-color: couleurs.$couleur1;
     color: couleurs.$whiteFont;
@@ -163,7 +162,26 @@ header {
         width: 100%;
         margin-bottom: 40px;
     }
+
+    .fleche-retour {
+        left: 50%;
+        position: absolute;
+        top: 5px;
+
+        a {
+            background: none;
+            background-color: rgba(140, 201, 60, 0.83);
+
+            border: 2px solid transparent;
+            border-left-color: inherit;
+            border-top-color: inherit;
+            content: "";
+            display: inline-block;
+            transform: rotate(45deg);
+        }
+    }
 }
+
 
 
 /* ================ Accueil ================ */
@@ -258,20 +276,25 @@ header {
 }
 
 /* ================ Page About ================ */
-.center-img {
+#about {
+    padding: auto auto;
     display: flex;
-    justify-content: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
 
-    #storefront {
-        img{
-            width : 33%;
-            border-radius: 20px;
-            height:300px;
-        }
+    img {
+        width: 100%;
     }
 }
+
+#store {
+    img {
+        width: 32%;
+        border-radius: 20px;
+        height: 300px;
+    }
+}
+
 
 /* ================ Page Recettes ================ */
 /* --- recettes - hub --- */
@@ -331,6 +354,10 @@ h1 {
 
     #civilite {
         margin-bottom: 10px;
+
+        label {
+            margin: 0 20px 0 3px;
+        }
     }
 
     .deuxColonnes {
@@ -348,6 +375,7 @@ h1 {
         width: 90%;
         margin-bottom: 10px;
     }
+
 
     #Objet {
         width: 70%;
@@ -385,6 +413,26 @@ h1 {
             }
         }
     }
+
+    #checkboxes {
+        label {
+            margin-left: 3px;
+            font-size: smaller;
+        }
+
+        p {
+            margin-bottom: 5px;
+        }
+
+        a {
+            color: #58bb3f;
+
+            &:hover {
+                color: couleurs.$couleur1;
+                text-decoration: underline;
+            }
+        }
+    }
 }
 
 .cadre {
@@ -404,6 +452,52 @@ h1 {
     }
 }
 
+/* ================ Page RGPD ================ */
+.policy {
+    box-shadow: 5px 5px 20px 10px grey;
+    padding: 20px 150px 70px 150px;
+
+    h1,
+    h2,
+    h3 {
+        font-family: fonts.$fontTitle;
+        color: couleurs.$couleur3;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        padding: 20px;
+        color: #cf6a17;
+    }
+
+    h2 {
+        text-indent: -50px;
+    }
+
+    p {
+        line-height: 145%;
+    }
+
+    .info-list {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 10px 20px;
+        margin: 20px 0;
+
+        dt {
+            font-weight: bold;
+        }
+    }
+
+    ul {
+        margin-left: 40px;
+
+        li {
+            list-style: disc;
+        }
+    }
+}
 
 /* ================ Responsive Design ================ */
 /* --- tablette --- */
@@ -489,7 +583,7 @@ h1 {
         }
     }
 
-    #enAvant {
+    .recettes-en-avant {
         flex-direction: column;
         align-items: center;
 
@@ -506,6 +600,25 @@ h1 {
             width: 100%;
             flex-direction: column;
             align-items: center;
+        }
+    }
+
+    .footer {
+        h3 {
+            margin-top: 20px;
+        }
+
+        &__reseaux {
+            margin-top: 10px;
+        }
+
+        &__footerNav {
+            margin-top: 10px;
+            flex-direction: column;
+
+            p {
+                padding: 5px 0;
+            }
         }
     }
 }

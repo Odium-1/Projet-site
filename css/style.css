@@ -26,7 +26,7 @@ ul {
 .contenu {
   max-width: 1200px;
   width: 100%;
-  margin: 0 auto;
+  margin: 40px auto;
 }
 
 body {
@@ -77,7 +77,6 @@ header .bandeau__burger {
 
 /* --- header - navigation --- */
 .nav-wrapper {
-  margin-bottom: 40px;
   background-color: #489934;
   font-family: "Inter Regular";
   font-size: 1.1rem;
@@ -109,7 +108,6 @@ header .bandeau__burger {
 
 /* ================ Footer ================ */
 .footer {
-  margin-top: 40px;
   height: 300px;
   background-color: #489934;
   color: #ffffff;
@@ -148,6 +146,21 @@ header .bandeau__burger {
   border-top: 1px solid rgba(255, 255, 255, 0.301);
   width: 100%;
   margin-bottom: 40px;
+}
+.footer .fleche-retour {
+  left: 50%;
+  position: absolute;
+  top: 5px;
+}
+.footer .fleche-retour a {
+  background: none;
+  background-color: rgba(140, 201, 60, 0.83);
+  border: 2px solid transparent;
+  border-left-color: inherit;
+  border-top-color: inherit;
+  content: "";
+  display: inline-block;
+  transform: rotate(45deg);
 }
 
 /* ================ Accueil ================ */
@@ -221,14 +234,18 @@ header .bandeau__burger {
 }
 
 /* ================ Page About ================ */
-.center-img {
+#about {
+  padding: auto auto;
   display: flex;
-  justify-content: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-.center-img #storefront img {
-  width: 33%;
+#about img {
+  width: 100%;
+}
+
+#store img {
+  width: 32%;
   border-radius: 20px;
   height: 300px;
 }
@@ -283,6 +300,9 @@ h1 {
 #contact #civilite {
   margin-bottom: 10px;
 }
+#contact #civilite label {
+  margin: 0 20px 0 3px;
+}
 #contact .deuxColonnes {
   display: flex;
   width: 100%;
@@ -329,6 +349,20 @@ h1 {
   left: 1px;
   box-shadow: none;
 }
+#contact #checkboxes label {
+  margin-left: 3px;
+  font-size: smaller;
+}
+#contact #checkboxes p {
+  margin-bottom: 5px;
+}
+#contact #checkboxes a {
+  color: #58bb3f;
+}
+#contact #checkboxes a:hover {
+  color: #489934;
+  text-decoration: underline;
+}
 
 .cadre {
   border-radius: 5px;
@@ -343,6 +377,45 @@ h1 {
   width: 100%;
   height: 300px;
   border-radius: 5px;
+}
+
+/* ================ Page RGPD ================ */
+.policy {
+  box-shadow: 5px 5px 20px 10px grey;
+  padding: 20px 150px 70px 150px;
+}
+.policy h1,
+.policy h2,
+.policy h3 {
+  font-family: "Georgia Regular";
+  color: #d17002;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.policy h1 {
+  padding: 20px;
+  color: #cf6a17;
+}
+.policy h2 {
+  text-indent: -50px;
+}
+.policy p {
+  line-height: 145%;
+}
+.policy .info-list {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px 20px;
+  margin: 20px 0;
+}
+.policy .info-list dt {
+  font-weight: bold;
+}
+.policy ul {
+  margin-left: 40px;
+}
+.policy ul li {
+  list-style: disc;
 }
 
 /* ================ Responsive Design ================ */
@@ -402,11 +475,11 @@ h1 {
   .bandeau p {
     display: none;
   }
-  #enAvant {
+  .recettes-en-avant {
     flex-direction: column;
     align-items: center;
   }
-  #enAvant__article {
+  .recettes-en-avant__article {
     width: 80%;
     margin-bottom: 30px;
   }
@@ -417,6 +490,19 @@ h1 {
     width: 100%;
     flex-direction: column;
     align-items: center;
+  }
+  .footer h3 {
+    margin-top: 20px;
+  }
+  .footer__reseaux {
+    margin-top: 10px;
+  }
+  .footer__footerNav {
+    margin-top: 10px;
+    flex-direction: column;
+  }
+  .footer__footerNav p {
+    padding: 5px 0;
   }
 }
 

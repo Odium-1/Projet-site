@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/lightbox.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -42,14 +43,15 @@
         <div class="page-recette">
             <a class="fleche-retour" href="recettes.html"><i class="fa-solid fa-arrow-left"></i></a>
             <div class="page-recette__content">
-                <h1 class="titre">Crumble rhubarbe-fraise</h1>
+                <h1 class="titre">Crème aux œufs de Gourhert</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolorem ipsam maiores fugiat
                     libero necessitatibus dolorum nesciunt! Fuga nam qui numquam pariatur commodi quidem alias harum
                     aperiam quibusdam. Eligendi, quis.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ratione, voluptatum labore dolore
                     libero nesciunt commodi quam non quo ipsum vero architecto, dolorem vel, amet fuga. Ipsum commodi
                     laudantium omnis.</p>
-                <img src="images/cremesoeufs.jpg" alt="crème aux oeufs">
+                <a href="images/cremesoeufs.jpg" data-lightbox="recette" data-title="Crème aux œufs de Gourhert"><img
+                        src="images/cremesoeufs.jpg" alt="crème aux oeufs"></a>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum id provident dolore, rem, cum eaque
                     similique eveniet alias aperiam ipsa laboriosam commodi? Voluptatum explicabo delectus animi ipsum
                     omnis, qui sint.</p>
@@ -85,7 +87,8 @@
             $(".nav-wrapper").slideToggle(500);
         })
     </script>
-    
+    <script type="text/javascript" src="scripts/lightbox.js"></script>
+
 </body>
 
 </html>

@@ -23,7 +23,7 @@ ul {
   list-style-type: none;
 }
 
-#contenu {
+.contenu {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
@@ -38,18 +38,16 @@ body {
   font-family: "Georgia Regular";
 }
 
-/* ================ Banner ================ */
+/* ================ Header ================ */
 header {
   background-image: url(../images/etal-legumes2.jpg);
   font-family: "Georgia Regular";
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 40px;
 }
 header .bandeau {
   max-width: 1200px;
-  display: flex;
   align-items: center;
   margin: 20px 0;
   display: flex;
@@ -74,40 +72,44 @@ header .bandeau p {
 header .bandeau__burger {
   font-size: 3rem;
   display: none;
-  z-index: 9;
+  z-index: 1000;
 }
-header .nav-wrapper {
+
+/* --- header - navigation --- */
+.nav-wrapper {
+  margin-bottom: 40px;
   background-color: #489934;
   font-family: "Inter Regular";
   font-size: 1.1rem;
   width: 100%;
   height: 60px;
-  z-index: 8;
+  z-index: 999;
+  position: sticky;
+  top: 0;
 }
-header .nav-wrapper__navBar {
+.nav-wrapper__navBar {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-header .nav-wrapper__navBar ul {
+.nav-wrapper__navBar ul {
   width: 600px;
   margin: 0 200px;
   display: flex;
   justify-content: space-between;
 }
-header .nav-wrapper__navBar ul a {
+.nav-wrapper__navBar li a {
   color: #ffffff;
 }
-header .nav-wrapper__navBar ul a li {
-  padding: 16px 0;
-}
-header .nav-wrapper__navBar ul a li:hover {
+.nav-wrapper__navBar li a:hover {
   border-bottom: 5px solid white;
+  padding: 16px 0;
 }
 
 /* ================ Footer ================ */
 .footer {
+  margin-top: 40px;
   height: 300px;
   background-color: #489934;
   color: #ffffff;
@@ -170,43 +172,40 @@ header .nav-wrapper__navBar ul a li:hover {
   height: 285px;
 }
 
-/* --- accueil - en avant --- */
-#enAvant {
+/* --- page accueil et recettes - articles en avant --- */
+.recettes-en-avant {
   max-width: 1200px;
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 70px;
 }
-#enAvant__article {
+.recettes-en-avant__article {
   width: 28%;
   border: 1px solid rgba(53, 51, 51, 0.274);
   padding-bottom: 24px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 }
-#enAvant__article img {
+.recettes-en-avant__article img {
   width: 100%;
 }
-#enAvant__article h3,
-#enAvant__article p {
+.recettes-en-avant__article h3,
+.recettes-en-avant__article p {
   padding: 16px 16px 0;
 }
-#enAvant__article h3 a,
-#enAvant__article p a {
+.recettes-en-avant__article h3 a,
+.recettes-en-avant__article p a {
   color: rgb(190, 158, 116);
 }
-#enAvant__article h3 a:hover,
-#enAvant__article p a:hover {
+.recettes-en-avant__article h3 a:hover,
+.recettes-en-avant__article p a:hover {
   color: rgb(231, 193, 142);
 }
-#enAvant__article:hover {
+.recettes-en-avant__article:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
 }
 
 /* --- accueil - partenaires --- */
-#partners {
-  margin-bottom: 40px;
-}
 #partners h3 {
   margin-bottom: 15px;
 }
@@ -221,43 +220,129 @@ header .nav-wrapper__navBar ul a li:hover {
   max-height: 180px;
 }
 
+/* ================ Page About ================ */
+.center-img {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.center-img #storefront img {
+  width: 33%;
+  border-radius: 20px;
+  height: 300px;
+}
+
+/* ================ Page Recettes ================ */
+/* --- recettes - hub --- */
+/* --- recettes - article --- */
+.page-recette {
+  margin: 30px;
+  padding: 30px 50px 50px 50px;
+  border: 1px solid #c9c9c9;
+  box-shadow: 5px 3px 16px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.page-recette .fleche-retour {
+  padding: 5px;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  font-size: 1.4rem;
+  color: black;
+  transition: 0.3s;
+}
+.page-recette .fleche-retour:hover {
+  box-shadow: 5px 3px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.page-recette__content {
+  margin: 20px 30px 0 30px;
+}
+.page-recette__content .titre {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.page-recette__content p {
+  text-indent: 40px;
+}
+.page-recette__content img {
+  border-radius: 10px;
+  margin: 25px 25%;
+  width: 50%;
+}
+
 /* ================ Page Contact ================ */
+h1 {
+  margin-bottom: 30px;
+}
+
 #contact {
   width: 50%;
   padding: 0 25%;
+  margin-bottom: 25px;
 }
-
-.deuxColonnes {
+#contact #civilite {
+  margin-bottom: 10px;
+}
+#contact .deuxColonnes {
   display: flex;
   width: 100%;
 }
-.deuxColonnes p {
+#contact .deuxColonnes p {
   width: 100%;
 }
-
 #contact input[type=text],
 #contact input[type=email],
 #contact select {
   width: 90%;
+  margin-bottom: 10px;
 }
-
-#contact textarea {
+#contact #Objet {
+  width: 70%;
+  margin-bottom: 10px;
+}
+#contact #message {
   width: 95%;
 }
-
-#contact input[type=submit],
-#contact input[type=reset] {
+#contact .submit {
+  display: flex;
+  justify-content: space-evenly;
+}
+#contact .submit input[type=submit],
+#contact .submit input[type=reset] {
   padding: 8px;
   margin: 16px 8px 16px 0;
-  background-color: #c9c9c9;
+  background-color: #58bb3f;
   border: none;
   border-radius: 5px;
   color: #F3F9EC;
   font-size: 1.2rem;
+  position: relative;
 }
-#contact input[type=submit]:hover,
-#contact input[type=reset]:hover {
-  background-color: #139120;
+#contact .submit input[type=submit]:hover,
+#contact .submit input[type=reset]:hover {
+  background-color: #489934;
+  box-shadow: 5px 3px 16px 0 rgba(0, 0, 0, 0.2);
+}
+#contact .submit input[type=submit]:active,
+#contact .submit input[type=reset]:active {
+  top: 2px;
+  left: 1px;
+  box-shadow: none;
+}
+
+.cadre {
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+}
+.cadre .iframe {
+  width: 50%;
+}
+.cadre .iframe #map {
+  border: 1px solid rgba(53, 51, 51, 0.274);
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
 }
 
 /* ================ Responsive Design ================ */
@@ -273,39 +358,45 @@ header .nav-wrapper__navBar ul a li:hover {
   header .bandeau__burger {
     display: block;
     padding-right: 3%;
+    position: relative;
   }
-  header .nav-wrapper {
-    position: absolute;
+  .nav-wrapper {
+    position: fixed;
     right: 0px;
     display: none;
-    height: 100%;
+    height: 90%;
     width: 35%;
-    border-radius: 50px 0 0 50px;
+    border-radius: 0 0 0 50px;
   }
-  header .nav-wrapper ul {
+  .nav-wrapper ul {
+    padding-top: 60%;
     display: block;
     margin: 0;
     flex-direction: column;
     text-align: center;
   }
-  header .nav-wrapper ul li {
+  .nav-wrapper ul li {
     padding: 35px 0;
   }
-  header .nav-wrapper ul li:hover, header .nav-wrapper ul li:active {
+  .nav-wrapper ul li:hover, .nav-wrapper ul li:active {
     background-color: #2b5f1e;
   }
-  header .nav-wrapper ul li a:hover {
+  .nav-wrapper ul li a:hover {
     border-bottom: none;
   }
 }
 /* --- portable --- */
 @media screen and (max-width: 690px) {
-  header .nav-wrapper {
+  .nav-wrapper {
     height: 50%;
     width: 100%;
     border-radius: 0 0 50px 50px;
   }
-  header .nav-wrapper ul li {
+  .nav-wrapper ul {
+    padding-top: 0;
+    width: 100%;
+  }
+  .nav-wrapper ul li {
     padding: 20px 0;
   }
   .bandeau p {

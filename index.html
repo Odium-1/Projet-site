@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Vente directe à la ferme de produits bios - La Ferme de Gourhert</title>
+    <title>Ferme de Gourhert</title>
+    <link rel="icon" type="image/png" href="images/favicon-GOURHERT.png">
     <link rel="stylesheet" href="theme/default.css" type="text/css" media="screen">
     <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -24,30 +25,20 @@
                 locale respectueuse de l’homme et de l’environnement.</p>
             <div class="bandeau__burger"><i class="fa-solid fa-bars"></i></div>
         </div>
-        <div class="nav-wrapper">
-            <nav class="nav-wrapper__navBar">
-                <ul>
-                    <a href="index.html">
-                        <li>Accueil</li>
-                    </a>
-                    <a href="about.html">
-                        <li>À propos</li>
-                    </a>
-                    <a href="store.html">
-                        <li>Produits</li>
-                    </a>
-                    <a href="recettes.html">
-                        <li>Recettes</li>
-                    </a>
-                    <a href="contact.html">
-                        <li>Contact</li>
-                    </a>
-                </ul>
-            </nav>
-        </div>
     </header>
+    <div class="nav-wrapper">
+        <nav class="nav-wrapper__navBar">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="store.html">Produits</a></li>
+                <li><a href="recettes.html">Recettes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 
-    <main id="contenu" class="container">
+    <main class="contenu">
         <div id="bienvenue">
             <div id="bienvenue__introduction">
                 <h2 class="titre titreVisuel"><strong>Une ferme de caractère</strong></h2>
@@ -84,26 +75,22 @@
             <!--  -->
         </div>
 
-
-
-        </div>
-
-        <section id="enAvant" class="container">
-            <article id="enAvant__article">
+        <section class="recettes-en-avant">
+            <article class="recettes-en-avant__article">
                 <img src="images/lemon cake.jpg" alt="bûche au citron">
-                <h3 class="titre"><a href="#">Bûche au citron meringuée</a></h3>
+                <h3 class="titre"><a href="buche-au-citron-meringuee.html">Bûche au citron meringuée</a></h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, iure tempore magnam labore
                     voluptatem quod incidunt! Consequuntur adipisci quasi incidunt architecto quisquam.</p>
             </article>
-            <article id="enAvant__article">
+            <article class="recettes-en-avant__article">
                 <img src="images/crumble.jpg" alt="crumble rhubarbe-fraise">
-                <h3 class="titre"><a href="#">Crumble rhubarbe-fraise</a></h3>
+                <h3 class="titre"><a href="crumble-rhubarbe-fraise.html">Crumble rhubarbe-fraise</a></h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, iure tempore magnam labore
                     voluptatem quod incidunt! Consequuntur adipisci quasi incidunt architecto quisquam.</p>
             </article>
-            <article id="enAvant__article">
+            <article class="recettes-en-avant__article">
                 <img src="images/cremesoeufs.jpg" alt="crème aux oeufs gourhert">
-                <h3 class="titre"><a href="#">Crème aux oeufs de Gourhert</a></h3>
+                <h3 class="titre"><a href="creme-aux-oeufs-de-gourhert.html">Crème aux oeufs de Gourhert</a></h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, iure tempore magnam labore
                     voluptatem quod incidunt! Consequuntur adipisci quasi incidunt architecto quisquam.</p>
             </article>
@@ -116,7 +103,7 @@
                 <a href="#"><img src="images/partenaire2.jpg" alt="logo crème rit"></a>
                 <a href="#"><img src="images/partenaire3.webp" alt="logo maison tiegezh"></a>
         </div>
-        </div>
+
     </main>
 
     <footer class="footer">
@@ -144,7 +131,7 @@
             $('#slider').nivoSlider();
         });
         $("header .bandeau__burger i").click(function () {
-            $("header .nav-wrapper").slideToggle(500);
+            $(".nav-wrapper").slideToggle(500);
         })
     </script>
     <!--  -->

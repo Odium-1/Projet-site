@@ -4,7 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Vente directe à la ferme de produits bios - La Ferme de Gourhert</title>
+    <title>Ferme de Gourhert</title>
+    <link rel="icon" type="image/png" href="images/favicon-GOURHERT.png">
+    <link rel="stylesheet" href="theme/default.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -22,50 +25,68 @@
                 locale respectueuse de l’homme et de l’environnement.</p>
             <div class="bandeau__burger"><i class="fa-solid fa-bars"></i></div>
         </div>
-        <div class="nav-wrapper">
-            <nav class="nav-wrapper__navBar">
-                <ul>
-                    <a href="index.html">
-                        <li>Accueil</li>
-                    </a>
-                    <a href="about.html">
-                        <li>À propos</li>
-                    </a>
-                    <a href="store.html">
-                        <li>Produits</li>
-                    </a>
-                    <a href="recettes.html">
-                        <li>Recettes</li>
-                    </a>
-                    <a href="contact.html">
-                        <li>Contact</li>
-                    </a>
-                </ul>
-            </nav>
-        </div>
     </header>
+    <div class="nav-wrapper">
+        <nav class="nav-wrapper__navBar">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="store.html">Produits</a></li>
+                <li><a href="recettes.html">Recettes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 
-    <main id="contenu" class="container">
+    <main class="contenu">
+
+        <section class="recettes-en-avant">
+            <article class="recettes-en-avant__article">
+                <img src="images/lemon cake.jpg" alt="gâteau au citron">
+                <h3 class="titre"><a href="buche-au-citron-meringuee.html">Bûche au citron meringuée</a></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, iure tempore magnam labore
+                    voluptatem quod incidunt! Consequuntur adipisci quasi incidunt architecto quisquam.</p>
+            </article>
+            <article class="recettes-en-avant__article">
+                <img src="images/crumble.jpg" alt="crumble rhubarbe-fraise">
+                <h3 class="titre"><a href="crumble-rhubarbe-fraise.html">Crumble rhubarbe-fraise</a></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, iure tempore magnam labore
+                    voluptatem quod incidunt! Consequuntur adipisci quasi incidunt architecto quisquam.</p>
+            </article>
+            <article class="recettes-en-avant__article">
+                <img src="images/cremesoeufs.jpg" alt="crème aux oeufs gourhert">
+                <h3 class="titre"><a href="creme-aux-oeufs-de-gourhert.html">Crème aux oeufs de Gourhert</a></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, iure tempore magnam labore
+                    voluptatem quod incidunt! Consequuntur adipisci quasi incidunt architecto quisquam.</p>
+            </article>
+        </section>
 
     </main>
 
     <footer class="footer">
-        <div class="colonne">
-            <h3>La Ferme de Gourhert</h3>
-            <address class="reseaux">
-                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
-            </address>
-            <div id="footerNav">
-                <p><a href="contact.html">Contact</a></p>
-                <p><a href="#">Politique de confidentialité</a></p>
-                <p><a href="#">Mentions légales</a></p>
-            </div>
-            <p>2025 Ferme de Gourhert - Tous droits réservés</p>
+        <h3>La Ferme de Gourhert</h3>
+        <address class="footer__reseaux">
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+        </address>
+        <div class="footer__footerNav">
+            <p><a href="contact.html">Contact</a></p>
+            <p><a href="confidentiality.html">Politique de confidentialité</a></p>
+            <p><a href="legal-mentions.html">Mentions légales</a></p>
+        </div>
+        <div class="footer__copyright">
+            <p>© 2025 Ferme de Gourhert - Tous droits réservés</p>
             <p>4, Gourhert - 56800 Ploërmel - Réalisation Kercode</p>
         </div>
-
     </footer>
+
+    <script type="text/javascript" src="scripts/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript">
+        $("header .bandeau__burger i").click(function () {
+            $(".nav-wrapper").slideToggle(500);
+        })
+    </script>
+    
 </body>
 
 </html>

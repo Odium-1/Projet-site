@@ -32,46 +32,55 @@ body {
 
 /* ================ Header ================ */
 header {
-    background-image: url(../images/etal-legumes2.jpg);
-    font-family: fonts.$fontTitle;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .bandeau {
-        max-width: 1200px;
-        align-items: center;
-        margin: 20px 0;
+    .bandeau_wrapper {
+        background-image: url(../images/etal-legumes2.jpg);
+        font-family: fonts.$fontTitle;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
 
-        &__logo {
-            display: flex;
+        .bandeau {
+            max-width: 1200px;
             align-items: center;
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-between;
 
-            img {
-                width: 100%;
-                max-width: 200px;
+            &__logo {
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 100%;
+                    max-width: 200px;
+                }
+
+                h2 {
+                    width: 35%;
+                }
+
             }
 
-            h2 {
-                width: 35%;
+            p {
+                font-family: fonts.$fontTexte;
+                width: 50%;
+                padding-right: 20px;
             }
 
-        }
-
-        p {
-            font-family: fonts.$fontTexte;
-            width: 50%;
-            padding-right: 20px;
-        }
-
-        &__burger {
-            font-size: 3rem;
-            display: none;
-            z-index: 1000;
         }
     }
+}
+
+.burger {
+    color: couleurs.$whiteFont;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    background-color: couleurs.$couleur1;
+    border-radius: 0 0 0 10px;
+    font-size: 3rem;
+    display: none;
+    z-index: 1000;
 }
 
 /* --- header - navigation --- */
@@ -116,70 +125,58 @@ header {
 
 /* ================ Footer ================ */
 .footer {
-    height: 300px;
+    height: 250px;
     background-color: couleurs.$couleur1;
-    color: couleurs.$whiteFont;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
 
-    h3 {
-        margin-top: 50px;
-    }
-
-    &__reseaux {
-        font-size: 1.4rem;
-        display: flex;
-
-        i {
-            padding: 0 10px;
-        }
-    }
-
-    a {
-        color: couleurs.$whiteFont;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-
-    &__footerNav {
-        display: flex;
-        margin-bottom: 30px;
-
-        p {
-            padding: 0 20px;
-        }
-    }
-
-    &__copyright {
-        padding-top: 20px;
-        font-size: small;
-        border-top: 1px solid rgba(255, 255, 255, 0.301);
+    &__flex {
         width: 100%;
-        margin-bottom: 40px;
-    }
+        height: 100%;
+        color: couleurs.$whiteFont;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
 
-    .fleche-retour {
-        left: 50%;
-        position: absolute;
-        top: 5px;
+        h3 {
+            margin-top: 50px;
+        }
+
+        &__reseaux {
+            font-size: 1.4rem;
+            display: flex;
+
+            i {
+                padding: 0 10px;
+            }
+        }
 
         a {
-            background: none;
-            background-color: rgba(140, 201, 60, 0.83);
+            color: couleurs.$whiteFont;
 
-            border: 2px solid transparent;
-            border-left-color: inherit;
-            border-top-color: inherit;
-            content: "";
-            display: inline-block;
-            transform: rotate(45deg);
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        &__footerNav {
+            display: flex;
+            margin-bottom: 30px;
+
+            p {
+                padding: 0 20px;
+            }
+        }
+
+        &__copyright {
+            padding-top: 20px;
+            font-size: small;
+            border-top: 1px solid rgba(255, 255, 255, 0.301);
+            width: 100%;
+            margin-bottom: 40px;
         }
     }
+
 }
 
 
@@ -507,47 +504,47 @@ h1 {
     }
 
     header {
-        color: couleurs.$whiteFont;
-        background-image: url(/images/etal-legumes-vert.png);
+        bandeau-wrapper {
+            color: couleurs.$whiteFont;
+            background-image: url(/images/etal-legumes-vert.png);
 
-        .bandeau {
+        }
 
-            &__burger {
-                display: block;
-                padding-right: 3%;
-                position: relative;
-            }
+        .burger {
+            display: block;
         }
     }
 
 
     .nav-wrapper {
         position: fixed;
+        overflow: hidden;
         right: 0px;
         display: none;
-        height: 90%;
+        height: 70%;
         width: 35%;
         border-radius: 0 0 0 50px;
 
+        &__navBar {
+            ul {
+                padding-top: 60%;
+                display: block;
+                margin: 0;
+                flex-direction: column;
+                text-align: center;
 
-        ul {
-            padding-top: 60%;
-            display: block;
-            margin: 0;
-            flex-direction: column;
-            text-align: center;
+                li {
+                    padding: 35px 0;
 
-            li {
-                padding: 35px 0;
+                    &:hover,
+                    &:active {
+                        background-color: #2b5f1e;
+                    }
 
-                &:hover,
-                &:active {
-                    background-color: #2b5f1e;
-                }
-
-                a {
-                    &:hover {
-                        border-bottom: none;
+                    a {
+                        &:hover {
+                            border-bottom: none;
+                        }
                     }
                 }
             }
@@ -560,7 +557,7 @@ h1 {
 /* --- portable --- */
 @media screen and (max-width:690px) {
     .nav-wrapper {
-        height: 50%;
+        height: 45%;
         width: 100%;
         border-radius: 0 0 50px 50px;
 
@@ -604,20 +601,18 @@ h1 {
     }
 
     .footer {
-        h3 {
-            margin-top: 20px;
-        }
+        &__flex {
+            h3 {
+                margin-top: 20px;
+            }
 
-        &__reseaux {
-            margin-top: 10px;
-        }
+            &__reseaux {
+                margin-top: 10px;
+            }
 
-        &__footerNav {
-            margin-top: 10px;
-            flex-direction: column;
-
-            p {
-                padding: 5px 0;
+            &__footerNav {
+                margin-top: 10px;
+                flex-direction: column;
             }
         }
     }

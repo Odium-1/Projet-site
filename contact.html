@@ -6,13 +6,11 @@
     <meta name="viewport" content="width=device-width">
     <title>Ferme de Gourhert</title>
     <!-- Leaflet map -->
-     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/>
-      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-     crossorigin=""></script>
-     <!---->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!---->
     <link rel="icon" type="image/png" href="images/favicon-GOURHERT.png">
     <link rel="stylesheet" href="theme/default.css" type="text/css" media="screen">
     <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
@@ -24,15 +22,17 @@
 
 <body>
     <header>
-        <div class="bandeau">
-            <div class="bandeau__logo">
-                <a href="index.html"><img src="images/LOGO-GOURHERT.png" alt="logo gourhert"></a>
-                <h2>Ferme de Gourhert</h2>
+        <div class="burger"><i class="fa-solid fa-bars"></i></div>
+        <div class="bandeau_wrapper">
+            <div class="bandeau" id="bandeau">
+                <div class="bandeau__logo">
+                    <a href="index.html"><img src="images/LOGO-GOURHERT.png" alt="logo gourhert"></a>
+                    <h2>Ferme de Gourhert</h2>
+                </div>
+                <p>Légumes, œufs, viande ovine… choisissez les produits issus d’une agriculture biologique, paysanne et
+                    locale respectueuse de l’homme et de l’environnement.</p>
+                </div>
             </div>
-            <p>Légumes, œufs, viande ovine… choisissez les produits issus d’une agriculture biologique, paysanne et
-                locale respectueuse de l’homme et de l’environnement.</p>
-            <div class="bandeau__burger"><i class="fa-solid fa-bars"></i></div>
-        </div>
     </header>
     <div class="nav-wrapper">
         <nav class="nav-wrapper__navBar">
@@ -73,13 +73,15 @@
 
 
             <p>
-                <p><label for="Objet"></label>Objet de votre message<br><input type="text" name="Objet" id="Objet"></p>
-                <textarea name="message" id="message" rows="5"></textarea>
+            <p><label for="Objet"></label>Objet de votre message<br><input type="text" name="Objet" id="Objet"></p>
+            <textarea name="message" id="message" rows="5"></textarea>
             </p>
-            
+
             <div id="checkboxes">
-                    <p><input type="checkbox" name="newsletter" id="newsletter"><label for="newsletter">Je souhaite recevoir des offres promotionnelles et actualités de la part de la Ferme de Gourhert.</label><br></p>
-                   <p><input type="checkbox" name="RGPD" id="RGPD"><label for="RGPD">Je confirme avoir lu et accepté la <a href="confidentiality.html">Politique de Confidentialité</a>.</label></p>
+                <p><input type="checkbox" name="newsletter" id="newsletter"><label for="newsletter">Je souhaite recevoir
+                        des offres promotionnelles et actualités de la part de la Ferme de Gourhert.</label><br></p>
+                <p><input type="checkbox" name="RGPD" id="RGPD"><label for="RGPD">Je confirme avoir lu et accepté la <a
+                            href="confidentiality.html">Politique de Confidentialité</a>.</label></p>
             </div>
 
             <p class="submit">
@@ -98,25 +100,27 @@
     </main>
 
     <footer class="footer">
-        <h3>La Ferme de Gourhert</h3>
-        <address class="footer__reseaux">
-            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
-        </address>
-        <div class="footer__footerNav">
-            <p><a href="contact.html">Contact</a></p>
-            <p><a href="confidentiality.html">Politique de confidentialité</a></p>
-            <p><a href="legal-mentions.html">Mentions légales</a></p>
-        </div>
-        <div class="footer__copyright">
-            <p>© 2025 Ferme de Gourhert - Tous droits réservés</p>
-            <p>4, Gourhert - 56800 Ploërmel - Réalisation Kercode</p>
+        <div class="footer__flex">
+            <h3>La Ferme de Gourhert</h3>
+            <address class="footer__flex__reseaux">
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+            </address>
+            <div class="footer__flex__footerNav">
+                <p><a href="contact.html">Contact</a></p>
+                <p><a href="confidentiality.html">Politique de confidentialité</a></p>
+                <p><a href="legal-mentions.html">Mentions légales</a></p>
+            </div>
+            <div class="footer__flex__copyright">
+                <p>© 2025 Ferme de Gourhert - Tous droits réservés</p>
+                <p>4, Gourhert - 56800 Ploërmel - Réalisation Kercode</p>
+            </div>
         </div>
     </footer>
 
     <script type="text/javascript" src="scripts/jquery-1.9.0.min.js"></script>
     <script type="text/javascript">
-        $("header .bandeau__burger i").click(function () {
+        $("header .burger i").click(function () {
             $(".nav-wrapper").slideToggle(500);
         })
 
@@ -126,7 +130,7 @@
         }).addTo(map);
         L.marker([47.913534, -2.397710]).addTo(map)
     </script>
-    <!--  -->
+
 </body>
 
 </html>

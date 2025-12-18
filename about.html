@@ -16,15 +16,17 @@
 
 <body>
     <header>
-        <div class="bandeau">
-            <div class="bandeau__logo">
-                <a href="index.html"><img src="images/LOGO-GOURHERT.png" alt="logo gourhert"></a>
-                <h2>Ferme de Gourhert</h2>
+        <div class="burger"><i class="fa-solid fa-bars"></i></div>
+        <div class="bandeau_wrapper">
+            <div class="bandeau" id="bandeau">
+                <div class="bandeau__logo">
+                    <a href="index.html"><img src="images/LOGO-GOURHERT.png" alt="logo gourhert"></a>
+                    <h2>Ferme de Gourhert</h2>
+                </div>
+                <p>Légumes, œufs, viande ovine… choisissez les produits issus d’une agriculture biologique, paysanne et
+                    locale respectueuse de l’homme et de l’environnement.</p>
+                </div>
             </div>
-            <p>Légumes, œufs, viande ovine… choisissez les produits issus d’une agriculture biologique, paysanne et
-                locale respectueuse de l’homme et de l’environnement.</p>
-            <div class="bandeau__burger"><i class="fa-solid fa-bars"></i></div>
-        </div>
     </header>
     <div class="nav-wrapper">
         <nav class="nav-wrapper__navBar">
@@ -45,29 +47,30 @@
     </main>
 
     <footer class="footer">
-        <h3>La Ferme de Gourhert</h3>
-        <address class="footer__reseaux">
-            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
-        </address>
-        <div class="footer__footerNav">
-            <p><a href="contact.html">Contact</a></p>
-            <p><a href="confidentiality.html">Politique de confidentialité</a></p>
-            <p><a href="legal-mentions.html">Mentions légales</a></p>
-        </div>
-        <div class="footer__copyright">
-            <p>© 2025 Ferme de Gourhert - Tous droits réservés</p>
-            <p>4, Gourhert - 56800 Ploërmel - Réalisation Kercode</p>
+        <div class="footer__flex">
+            <h3>La Ferme de Gourhert</h3>
+            <address class="footer__flex__reseaux">
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+            </address>
+            <div class="footer__flex__footerNav">
+                <p><a href="contact.html">Contact</a></p>
+                <p><a href="confidentiality.html">Politique de confidentialité</a></p>
+                <p><a href="legal-mentions.html">Mentions légales</a></p>
+            </div>
+            <div class="footer__flex__copyright">
+                <p>© 2025 Ferme de Gourhert - Tous droits réservés</p>
+                <p>4, Gourhert - 56800 Ploërmel - Réalisation Kercode</p>
+            </div>
         </div>
     </footer>
 
     <script type="text/javascript" src="scripts/jquery-1.9.0.min.js"></script>
     <script type="text/javascript">
-        $("header .bandeau__burger i").click(function () {
+        $("header .burger i").click(function () {
             $(".nav-wrapper").slideToggle(500);
         })
     </script>
-    
 </body>
 
 </html>
